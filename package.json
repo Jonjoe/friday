@@ -9,7 +9,12 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "generate:atom": "react-component-generator path='./src/components/atoms'",
+    "generate:molecule": "react-component-generator path='./src/components/molecules'",
+    "generate:organism": "react-component-generator path='./src/components/organisms'",
+    "generate:template": "react-component-generator path='./src/components/templates'",
+    "generate:layout": "react-component-generator path='./src/components/layouts'"
   },
   "keywords": [],
   "author": {
@@ -100,6 +105,7 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "electron-squirrel-startup": "^1.0.0",
+    "file-loader": "^6.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

@@ -1,31 +1,22 @@
 import React from "react";
+import * as Pages from "./pages";
+import { createGlobalStyle } from "styled-components";
 
-import config from "./config";
-
-import { AnydoModelItem } from "./modules/anydo/interfaces";
-
-import getTasks from "./modules/anydo";
+const GlobalStyles = createGlobalStyle`
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+`;
 
 const App: React.FC = () => {
-  const [tasks, setTasks] = React.useState<AnydoModelItem[]>([]);
-
-  console.log("DEBUGGG", config);
-
-  React.useEffect(() => {
-    getTasks().then((tasks) => {
-      setTasks(tasks);
-    });
-  }, []);
-
   return (
-    <main>
-      <h1>Tasks</h1>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task.title}</li>
-        ))}
-      </ul>
-    </main>
+    <React.Fragment>
+      <GlobalStyles />
+      <Pages.Home />
+    </React.Fragment>
   );
 };
 

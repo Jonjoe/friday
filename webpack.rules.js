@@ -15,6 +15,13 @@ module.exports = [
     },
   },
   {
+    test: /\.(png|jpe?g|svg)$/,
+    loader: "file-loader",
+    options: {
+      name: "assets/[name].[ext]",
+    },
+  },
+  {
     test: /\.tsx?$/,
     exclude: /(node_modules|.webpack)/,
     loaders: [
