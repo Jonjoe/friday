@@ -86,7 +86,7 @@
     "eslint": "^7.1.0",
     "eslint-plugin-react": "^7.20.0",
     "fork-ts-checker-webpack-plugin": "^4.1.6",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "node-loader": "^0.6.0",
     "style-loader": "^0.23.1",
     "styled-components": "^5.1.1",
